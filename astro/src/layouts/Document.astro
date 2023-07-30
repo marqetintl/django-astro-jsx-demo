@@ -1,0 +1,32 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const HMR = process.env.HRM;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+    {HMR && <script>
+			const socket = new WebSocket("ws://127.0.0.1:8080");
+			socket.addEventListener("message", function () {
+				document.location.reload();
+			});
+			</script>
+		}
+  </head>
+
+  <body>
+    <Header title={SITE_TITLE} />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>
