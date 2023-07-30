@@ -1,0 +1,17 @@
+django/templates/astro/*
+django/static/*
+
+env
+**/.yarn/*
+astro/yarn.lock
+
+django/db.sqlite3
+
+.DS_Store
+__pycache__/
+__pypackages__/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.coverage
+.coverage.*
