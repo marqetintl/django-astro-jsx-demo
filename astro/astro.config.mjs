@@ -13,7 +13,6 @@ export default defineConfig({
   trailingSlash: "always",
   compressHTML: process.env.NODE_ENV === "production",
   build: {
-    copyPublicDir: false,
     format: "file",
     inlineStylesheets: "auto",
     assets: "static",
