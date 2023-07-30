@@ -3,11 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
     "watch": "HRM=true node watch",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
     "astro": "astro"
   },
   "devDependencies": {
