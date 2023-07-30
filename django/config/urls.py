@@ -38,10 +38,7 @@ class BlogsView(TemplateView):
 
 
 class BlogView(TemplateView):
-    template_name = 'astro/blog.html'
-
     def get_template_names(self):
-        print(self.kwargs)
         return [f'astro/blog/{self.kwargs["slug"]}.html', 'astro/404.html']
 
 
